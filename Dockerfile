@@ -1,4 +1,4 @@
-from ubuntu:latest
+FROM ubuntu:latest
 
 RUN sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
 
