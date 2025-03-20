@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 
 # Check for required EDirect tools
 for cmd in esearch elink efilter esummary xtract efetch; do
