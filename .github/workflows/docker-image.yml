@@ -12,16 +12,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
 
-      - name: Build Docker image
-        run: docker build -t ghcr.io/hgnc/hgnc-edirect:latest .
-
-      - name: Push Docker image
-        run: docker push ghcr.io/hgnc/hgnc-edirect:latest
+      - name: Build and Push Docker image
+        run: |
+          export CR_PAT=${{ secrets.GHCR_PAT }}
+          echo $CR_PAT | docker login ghcr.io -u KrisGray --password-stdin
+          docker build -t ghcr.io/hgnc/hgnc-edirect:latest .
+          docker push ghcr.io/hgnc/hgnc-edirect:latest
