@@ -19,5 +19,5 @@ jobs:
         run: |
           export CR_PAT=${{ secrets.GHCR_PAT }}
           echo $CR_PAT | docker login ghcr.io -u KrisGray --password-stdin
-          docker build -t ghcr.io/hgnc/hgnc-edirect:latest .
-          docker push ghcr.io/hgnc/hgnc-edirect:latest
+          docker build -t ghcr.io/hgnc/hgnc-edirect:amd64-latest .
+          docker push ghcr.io/hgnc/hgnc-edirect:amd64-latest
