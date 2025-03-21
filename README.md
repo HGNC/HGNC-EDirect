@@ -15,6 +15,10 @@ To use EDirect itself, view the below example
 docker run ghcr.io/hgnc/hgnc-edirect:latest /root/edirect/einfo -db gene
 ```
 
+For more information about EDirect visit the links below:
+ - [NCBI EDirect book](https://www.ncbi.nlm.nih.gov/books/NBK179288/)
+ - [EDirect Cookbook](https://github.com/NCBI-Hackathons/EDirectCookbook)
+
 ## Installation
 
 ```bash
