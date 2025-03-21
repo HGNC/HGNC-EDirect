@@ -1,5 +1,5 @@
 FROM ubuntu:jammy
-
+LABEL org.opencontainers.image.source https://github.com/HGNC/HGNC-EDirect
 RUN apt-get update && apt-get install -y curl
 RUN apt-get install -y libtime-hires-perl
 RUN sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
