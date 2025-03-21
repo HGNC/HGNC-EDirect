@@ -5,12 +5,12 @@
 ## Usage
  
 ```bash
-docker run -v $(pwd)/input/sample.txt:/app/sample.txt hgnc-edirect /app/bin/ncbi-fetch-seq-by-sym.sh /app/sample.txt horse > out.fa
+docker run -v $(pwd)/input/sample.txt:/app/sample.txt ghcr.io/hgnc/hgnc-edirect:latest /app/bin/ncbi-fetch-seq-by-sym.sh /app/sample.txt horse > out.fa
 ```
 
 ## Installation
 ```bash
-docker build --no-cache -t hgnc-edirect .
+docker pull ghcr.io/hgnc/hgnc-edirect:latest
 ```
 
 ## Scripts available
